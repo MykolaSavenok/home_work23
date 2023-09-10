@@ -1,0 +1,105 @@
+<!-- Указываем браузеру как нужно обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
+   <title>Source</title>
+   <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+   <div class="wrapper">
+      <header class="header">
+         <div class="header__container">
+            <a href="index.html" class="header__logo"><img src="img/logo/logo.png" alt="logo"></a>
+            <div class="header__menu menu">
+               <nav class="menu__body">
+                  <ul class="menu__list">
+                     <li><a href="index.html" class="menu__link">Головна</a></li>
+                     <li><a href="#" class="menu__link">Контакти</a></li>
+                     <li><a href="#" class="menu__link" id="myOreders">Мої замовлення</a></li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </header>
+      <main class="main">
+         <div class="main__container">
+            <div class="main__navbar navbar">
+               <nav class="navbar__body">
+                  <ul class="navbar__category">
+                     <li class="navbar__list" data-filter="t-shirts">Футболки</li>
+                     <li class="navbar__list" data-filter="sweatshirts">Кофти</li>
+                     <li class="navbar__list" data-filter="cups">Різне</li>
+                  </ul>
+               </nav>
+            </div>
+            <div class="main__items item">
+               <div class="item__products"></div>
+               <form class="form">
+                  <div class="form__body">
+                     <div class="form__fullname">
+                        <label for="name">Ваш ПІБ:</label>
+                        <input id="name" type="text" pattern="^[^\s]+(\s.*)?$" required>
+                     </div>
+                     <div class="form__city">
+                        <label for="city">Ваше місто:</label>
+                        <select id="city" required>
+                           <option value="">Оберіть ваше місто</option>
+                           <option value="Київ">Київ</option>
+                           <option value="Львів">Львів</option>
+                           <option value="Дніпро">Дніпро</option>
+                           <option value="Харьків">Харьків</option>
+                        </select>
+                     </div>
+                     <div class="form__post">
+                        <label for="post">Склад нової пошти:</label>
+                        <input type="text" id="post" pattern="^[^\s]+(\s.*)?$" required>
+                     </div>
+                     <div class="form__pay">
+                        <label for="paymethod">Спосіб оплати:</label>
+                        <select name="" id="paymethod" required>
+                           <option value="">Оберіть спосіб оплати</option>
+                           <option value="Баньківська карта">Баньківська карта</option>
+                           <option value="При отримані">При отримані</option>
+                        </select>
+                     </div>
+                     <div class="form__count">
+                        <label for="quantity">Кількість:</label>
+                        <input type="number" min="1" id="quantity" required>
+                     </div>
+                     <div class="form__coment">
+                        <label for="yourcomment">Коментар до замовлення:</label>
+                        <textarea name="" id="yourcomment" cols="30" rows="5"></textarea>
+                     </div>
+                     <div class="form__button">
+                        <button class="form__send" type="submit">Замовити</button>
+                        <button class="form__cancel" type="button">Відмінити</button>
+                     </div>
+                  </div>
+               </form>
+               <div class="modal">
+                  <div class="modal__body">
+                     <div class="modal__content"></div>
+                  </div>
+               </div>
+               <div class="orders-list"></div>
+            </div> 
+         </div>
+      </main>
+      <footer class="footer">
+         <div class="footer__container">
+            <div class="footer__contacts contacts">
+               <div class="contacts__adress">Ukraine, Kyiv</div>
+               <div class="contacts__year">2023</div>
+            </div>
+         </div>
+      </footer>
+   </div>
+   <script src="js/main.js"></script>
+</body>
+
+</html>
